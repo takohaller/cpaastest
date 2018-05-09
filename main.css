@@ -1,0 +1,92 @@
+.grid {
+  width: 600px;
+  height: 150px;
+}
+
+/* Style the header */
+.header {
+  padding: 10px 16px;
+  background: #568dd4;
+  color: #f1f1f1;
+  min-width: 400px;
+}
+
+h2 {
+  color: white;	
+}
+
+.carousel {
+	width: 800px;
+	align: center;
+}
+.datePicker {
+	width: 200px;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* content boxes */
+.box {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.top {
+  padding-top: 102px; 
+}
+.bottom {
+  padding-bottom: 102px;
+  color: white; 
+}
+
+.footer {
+	background-color: black;
+	padding-top: 10px;
+	display: table;
+	
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.footerleft {
+	width: 50%;
+	padding: 10px;
+	color: #919191;
+	font-size: xx-small;
+	float: left;
+}
+
+.footerright {
+	width: 50%;
+	padding: 10px;
+	float: right;
+}
+
+img#ackimage {
+	float: right;
+	height: 70px;
+}
+
+div#sensorData {
+	background-color: #D8E9F9;
+}
+
+div#fetchResult {
+	color: #00B000;
+	font-size: small;
+	font-style: italic;
+	padding-bottom: 10px;
+}

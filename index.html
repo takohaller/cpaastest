@@ -1,0 +1,111 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/lodash.min.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/jszip.min.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/excel-builder.dist.js"></script>
+    <script src="lib/ui-grid/ui-grid.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/ui-grid/ui-grid.css" type="text/css">
+	<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='dashicons-css'  href='https://cpaas.bfh.ch/wp-includes/css/dashicons.min.css?ver=4.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='admin-bar-css'  href='https://cpaas.bfh.ch/wp-includes/css/admin-bar.min.css?ver=4.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='parent-style-css'  href='https://cpaas.bfh.ch/wp-content/themes/pique/style.css?ver=4.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='pique-style-css'  href='https://cpaas.bfh.ch/wp-content/themes/pique-child/style.css' type='text/css' media='screen' />
+	<link rel='stylesheet' id='pique-fonts-css'  href='https://fonts.googleapis.com/css?family=Lora%3A400%2C700%2C400italic%2C700italic%7CKarla%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='fontawesome-css'  href='https://cpaas.bfh.ch/wp-content/themes/pique/fonts/font-awesome.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='genericons-css'  href='https://cpaas.bfh.ch/wp-content/themes/pique/fonts/genericons.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+	<div class="header" id="myHeader">
+	  <h2>Sensor Home <div style="float:right"><a href="https://www.cpaas.io"><img style="height:40px" src="img\cpaasio-logo-nobackground.PNG"></a></div> </h2>
+	</div>
+	
+	<div class="box" id="sensorID">
+		<h3>Sensor ID</h3>
+	</div>
+	
+	<div class="box" id="sensorData">
+		<h3>Recent Sensor Data</h3>
+		Select the time span:
+
+		<h4>Temperature</h4>
+		<h4>Light</h4>
+		<h4>Events</h4>
+		<div ng-controller="MainCtrl as $ctrl">
+		  <div id="grid1" ui-grid="{ data: $ctrl.myData }" class="grid"></div>
+		</div>
+	</div>
+	
+	<div class="box" id="pictures">
+		<h3>Sensor Information</h3>
+		The device is a standard "<a href="https://www.thethingsnetwork.org/docs/devices/node/">The Things Node</a>", located at the Marzili Campus of the <a href="https://www.wirtschaft.bfh.ch/en/homepage_en.html">Bern University of Applied Sciences</a>.
+		
+<div class="container">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="ny.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+	</div>
+	
+	<div class="footer" id="ack">
+	</div>
+	
+
+  </body>
+</html>
