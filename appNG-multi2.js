@@ -39,6 +39,7 @@ var dataHandler = function(response, status, xhr) {
 		// temperatureChart.data = temperatureValues;
 	}
 	
+	/*
 	tvalues1 = [
 		{x: "2018-05-09T10:03:36.814711517Z", y: "24.81"},
 		{x: "2018-05-09T10:03:43.75103373Z", y: "24.88"},
@@ -52,8 +53,8 @@ var dataHandler = function(response, status, xhr) {
     ];;
 		
 	//temperatureChart.data = [tvalues1];
-
-	updateTemperatureChart([tvalues1]);
+	*/
+	updateTemperatureChart([temperatureValues]);
 };
 
 function fetchData() {
